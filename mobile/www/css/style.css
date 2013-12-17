@@ -1,0 +1,521 @@
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url('fonts/HelveticaNeueLTStd-Md.otf');
+
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Helvetica Neue light";
+    src: url('fonts/HelveticaNeueLTStd-Lt.otf');
+
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Helvetica Neue medium";
+    src: url('fonts/508056641-HelveticaNeueMedium.eot');
+    src: url('fonts/508056641-HelveticaNeueMedium.eot?#iefix') format('embedded-opentype'),
+    url('fonts/508056641-HelveticaNeueMedium.svg#Helvetica Neue') format('svg'),
+    url('fonts/508056641-HelveticaNeueMedium.woff') format('woff'),
+    url('fonts/508056641-HelveticaNeueMedium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #fff;
+    color: #666666;
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+	margin:0px;
+	padding:0px;
+}
+h1, h2, h3, h4, h5 {
+	font-weight:normal;
+	line-height:normal;
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+li {
+    list-style: none outside none;
+}
+ul {
+    margin: 0;
+}
+img {
+    border: 0 none;
+}
+.clear {
+    clear: both;
+}
+.header {
+	background:#ec008c;
+	position:relative;
+}
+.header  h3 {
+	color:#fff;
+	margin:0px;
+	text-align:center;
+	font-size:18px;
+	padding-top:8px;
+	padding-bottom:8px;
+	font-family: "Helvetica Neue medium";
+}
+.but-menu {
+	display:block;
+	position:absolute;
+	right:10px;
+	top:10px;
+
+}
+.but-menu a{
+	background:url(../images/smico.png) no-repeat;
+	width:25px;
+	height:18px;
+	display:block;
+}
+.intro-logo img {
+    margin-top: 10px;
+    width: 119px;
+}
+.font-small {
+    font-size: 11px;
+    line-height: 15px;
+    text-align: left;
+}
+.font-small a {
+    color: #333333;
+}
+.but-bottom {
+    border-top: 1px solid #ACACA9;
+    overflow: hidden;
+	position:fixed;
+	width:100%;
+	bottom:0px;
+	background:#fff;
+}
+.but-bottom a, .but-bottom input {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    color: #2181F7;
+    display: block;
+    float: left;
+    font-size: 17px;
+    height: 52px;
+    width: 49%;
+}
+.but-bottom a {
+    border-right: 1px solid #ACACA9;
+    font-family: "Helvetica Neue light";
+    line-height: 52px;
+}
+.text-intro {
+    padding: 5px 15px 0;
+}
+.box-login {
+	text-align:center;
+	margin-bottom:60px;
+	line-height:20px;
+}
+.form-sign input[type="text"], .form-sign input[type="password"] {
+    border-radius: 0 0 0 0;
+    font-family: "Helvetica Neue light";
+    margin-bottom: 0;
+    width: 90%;
+}
+.form-sign h3 {
+   font-family: "Helvetica Neue medium";
+    font-size: 22px;
+}
+.listindex li {
+	border-bottom:1px solid #fbcce8;
+}
+.listindex li img {
+	height:21px;
+	margin-right:10px;
+}
+.listindex li a {
+	padding:10px 5px;
+	font-family: "Helvetica Neue medium";
+	background:url(../images/mui.png) no-repeat right ;
+	margin-right:10px;
+	display:block;
+}
+.listindex li ul li {
+	border-bottom:0px;
+	border-top:1px solid #fbcce8;
+}
+.listindex li ul li a {
+	font-family: "Helvetica Neue light";
+	padding-left:35px;
+}
+.listindex .icon {
+
+}
+.icon {
+	height:20px;
+	width:21px;
+	display:inline-block;
+	margin-right:10px;
+}
+.icon-1 {
+	background:url(../images/icon.png) no-repeat;
+}
+.icon-2 {
+	background:url(../images/icon1.png) no-repeat;
+}
+.icon-3 {
+	background:url(../images/icon2.png) no-repeat;
+}
+.icon-4 {
+	background:url(../images/icon3.png) no-repeat;
+}
+.icon-5 {
+	background:url(../images/icon4.png) no-repeat;
+}
+.icon-6 {
+	background:url(../images/icon5.png) no-repeat;
+}
+.icon-7 {
+	background:url(../images/icon6.png) no-repeat;
+}
+.icon-8 {
+	background:url(../images/icon7.png) no-repeat;
+}
+.icon-9 {
+	background:url(../images/icon8.png) no-repeat;
+}
+.icon-10 {
+	background:url(../images/icon9.png) no-repeat;
+}
+.title {
+    font-family: "Helvetica Neue light";
+    margin-top: 15px;
+    overflow: hidden;
+	text-align:left;
+}
+.title h2 {
+    font-size: 60px;
+	margin:0px;
+}
+.title p {
+    color: #333333;
+    font-size: 25px;
+    line-height: 27px;
+}
+.nice-tip {
+	padding:10px 20px;
+	text-align:center;
+}
+.social {
+	margin-top:15px;
+	margin-bottom:20px;
+}
+.social img {
+	margin-left:10px;
+	margin-right:10px;
+	width:40px;
+}
+.bar-bot {
+	overflow:hidden;
+}
+.bar-bot div {
+	width:33.3%;
+	text-align:center;
+	float:left;
+	font-size:12px;
+}
+.bar-bot div img {
+	width:70%;
+}
+.langage li a  {
+	background:url(../images/nocheck.png) no-repeat right;
+}
+.langage li a.active {
+	background:url(../images/check.png) no-repeat right;
+}
+.john-nice {
+	overflow:hidden;
+}
+.john-nice a {
+	display:block;
+	float:left;
+	width:16.66%;
+	text-align:center;
+	margin-bottom:10px;
+}
+.john-nice a img {
+	width:70%;
+}
+.padding {
+	padding:20px;
+	padding-bottom:10px;
+}
+.list-john {
+	margin-top:30px;
+}
+.back {
+	display:block;
+	position:absolute;
+	left:10px;
+	top:10px;
+}
+.back a {
+	color:#fff;
+	display:block;
+	background:url(../images/back.png) no-repeat;
+	padding-left:20px;
+	font-size:16px;
+}
+.box-john .social {
+	background:#fff;
+	position:fixed;
+	bottom:0;
+	padding:10px 0px;
+	width:100%;
+	margin:0px;
+	text-align:center;
+	left:0px;
+}
+.faq li img {
+	margin-left:10px;
+}
+.faq-detail h2{
+	font-size:40px;
+	margin-bottom:10px;
+}
+.terms h2 {
+	font-size:30px;
+}
+.terms p {
+	font-size:17px;
+	line-height:20px;
+}
+.intro-logo {
+	text-align:center;
+}
+.place-nea {
+	margin-top:20px;
+}
+.place-nea li a {
+	padding-left:20px;
+	font-size:17px;
+	font-family: "Helvetica Neue light";
+}
+.place-nea li a span {
+	font-size:13px;
+}
+.search {
+	overflow:hidden;
+	padding:10px;
+	position:relative;
+	padding-right:50px;
+	padding-bottom:0px;
+}
+.search input[type="text"] {
+	border:10px;
+	width:98%;
+	background:#dedede;
+	height:25px;
+}
+.search button {
+	background:none;
+	border:0px;
+	position:absolute;
+	right:10px;
+	top:12px;
+}
+.search button img {
+	height:25px;
+}
+.img-input {
+	position:absolute;
+	width:20px;
+	right:50px;
+	top:17px;
+
+}
+.the-taem {
+	margin-top:0px;
+}
+.the-taem li a {
+	font-family: "Helvetica Neue";
+}
+.the-taem li a span {
+	font-size:17px;
+	font-family: "Helvetica Neue medium";
+}
+.box-team h3  {
+	font-family: "Helvetica Neue medium";
+	font-size:20px;
+	margin-bottom:0px;
+	margin-left:20px;
+}
+.logo-team {
+	text-align:center;
+}
+.logo-team img {
+	width:80%;
+}
+.title-team {
+	margin-bottom:30px;
+	font-size:25px;
+	font-family: "Helvetica Neue light";
+	margin-left:20px;
+	margin-top:10px;
+}
+.title-team p {
+	font-size:20px;
+	margin-top:5px;
+}
+.box-avatar {
+	overflow:hidden;
+	font-family: "Helvetica Neue light";
+	position:relative;
+}
+.box-avatar img {
+	width:35%;
+	float:left;
+	margin-right:15px;
+}
+.box-avatar  h4 {
+	font-family: "Helvetica Neue";
+	margin-top:0px;
+	font-size:22px;
+}
+.feed-pal {
+	margin-top:20px;
+    overflow: hidden;
+}
+.feed-pal li {
+	width:43%;
+	float:left;
+	text-align:center;
+	font-size:12px;
+}
+.feed-pal li img {
+	width:75%;
+	margin-bottom:10px;
+}
+.list-per {
+	border:1px solid #e2007a;
+	border-radius:10px 10px;
+	color:#333;
+}
+.list-per li {
+	padding:10px;
+	border-bottom:1px solid #e2007a;
+	overflow:hidden;
+}
+.list-per li:last-child {
+    border-bottom: 0 none;
+}
+.left-per {
+	float:left;
+	font-size:16px;
+
+}
+.left-per span {
+	font-size:11px;
+	padding-left:20px;
+}
+.price {
+	font-size:25px;
+	float:right;
+	margin-top:15px;
+}
+.price span {
+	font-size:35px;
+	display:block;
+	float:left;
+}
+.feedback-list h3 {
+	font-size:18px;
+}
+.pay-price {
+	overflow:hidden;
+	margin-top:20px;
+}
+.left-pay {
+	width:48%;
+	float:left;
+}
+.right-pay {
+	width:48%;
+	float:right;
+	text-align:right;
+	font-size:17px;
+}
+.right-pay .price {
+	border:1px solid #ec008c;
+	padding:10px;
+	margin-top:0px;
+	color:#000;
+}
+.form-con {
+	margin-top:20px;
+}
+.form-con label {
+	display:block;
+	color:#000;
+}
+.form-con input[type="text"], .form-con textarea {
+	width:95%;
+	border:1px solid #ec008c;
+	border-radius:10px 10px;
+	margin-bottom:0px;
+}
+.form-con textarea {
+	height:70px;
+}
+.box-paypal {
+	text-align:center;
+	margin-top:20px;
+}
+.box-paypal img {
+	width:100%;
+	margin-bottom:10px;
+}
+.box-paypal button {
+	background:none;
+	border:0px;
+	width:90%;
+}
+.review {
+	margin-top:20px;
+
+}
+.review img {
+	width:30px;
+	margin-bottom:0px;
+}
+.review p {
+	margin-bottom:5px;
+	color:#000;
+}
+.img-vote {
+	width:70px !important;
+	position:absolute;
+	bottom:0px;
+	right:-10px;
+}
+.loading{display: none}
+
+.btn-back {
+    float: left;
+    line-height: 30px
+}
+.cus-nav .navbar-inner {
+    padding: 0px;
+}
+.header h3{
+    background: #ec008c;
+}

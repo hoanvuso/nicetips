@@ -1,0 +1,16 @@
+Options +FollowSymLinks
+IndexIgnore */*
+
+RewriteEngine on
+
+# If you are in a sub folder of your web root you
+# might have to enable something like this:
+#
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule . index.php
+#.htacccess file can cause errors on some apache systems. It's better to replace rewriterule with this
+#RewriteRule ^.*$ /index.php [L]

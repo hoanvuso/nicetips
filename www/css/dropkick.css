@@ -1,0 +1,202 @@
+
+
+/*BEAR*/
+#dk_container_mama_bear {
+
+}
+
+#dk_container_papa_bear {
+	font-size: 40px;
+	margin: 0 0 0 2em;
+}
+
+
+
+
+/* === DROPKICK CSS === */
+/* One container to bind them... */
+.dk_container {
+}
+
+.dk_container:focus {
+	outline: 0;
+}
+
+.dk_container a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+/* Opens the dropdown and holds the menu label */
+.dk_toggle {							/*changed to ems*/
+	background: url("../images/drop.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+	font-size:15px;
+    height: 37px;
+    padding-left: 5px;
+    width: 289px;
+	text-align:left;
+	color: #8C8B8B;
+}
+.dk_toggle span {
+	display:block;
+	line-height:18px;
+	margin-top:8px;
+
+}
+
+.dk_toggle:after {
+	color: #999;					/*changed to ems*/				/*exactly the same as the parent - so everything aligns vertically*/
+	text-shadow: 0 0 .05em #222427;		/*changed to ems*/
+	float: right;
+	/*changed to ems*/
+	/*margin-top: 4px;					won't need this, we've specified the lineheight for vertical aligning*/
+}
+
+/* Applied whenever the dropdown is open */
+.dk_open {
+z-index: 10;
+}
+
+.dk_open .dk_toggle {
+	background: url("../images/drop.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+	font-size:15px;
+    height: 37px;
+    padding-left: 5px;
+    width: 289px;
+	text-align:left;
+	color: #8C8B8B;
+}
+
+.dk_open .dk_toggle:after {
+	/*I've removed a load of styles here, as they're all inherited from .dk_toggle:after */
+	color: #ededee;	
+}
+
+/* The outer container of the options */
+.dk_options {
+		font-size:14px;
+		height:200px;
+		overflow:scroll;
+			/*changed to ems*/
+}
+
+.dk_options a {
+	padding-left:5px;			/*added this instead of the padding top/bottom. we can now calculate it exactly */
+	
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	padding-top:3px;
+	padding-bottom:3px;
+}
+.dk_options li:hover {
+	background:#ddd;
+}
+
+.dk_options li {
+	border-bottom: 1px solid #ddd;
+    color: #8C8B8B;
+	background:#fff ;
+	text-align:left;
+	font-size:15px;
+}
+
+.dk_options li:first-child {
+	display: none;
+}
+
+.dk_options #divider {
+	width: 90%;							/*flexible value - leave as it is!*/
+	height: .1em;						/*rounded to a neat ems value*/		
+	margin: auto;
+
+}
+
+.dk_options li:last-child #divider {
+	display: none;
+}
+
+.dk_options a:hover,.dk_option_current a {
+	color: #8C8B8B;
+	text-decoration: none;
+}
+
+/* Inner container for options, this is what makes the scrollbar possible. */
+.dk_options_inner {
+	border:1px solid #ddd;
+	border-top:0px;
+	color: #8C8B8B;
+}
+
+/* Set a max-height on the options inner */
+.dk_options_inner,.dk_touch .dk_options {
+	/*max-height: 250px;	
+				not sure why?*/
+}
+
+/******  End Theme ******/
+/***** Critical to the continued enjoyment of working dropdowns ******/
+.dk_container {
+	display: none;
+	float: left;
+	position: relative;
+	z-index:100000;
+}
+
+.dk_container a {
+	/*width: auto!important;		I don't like using !important, but this needs to override a fixed pixel width which is added inline by the dropkick script - or comment out line 116 in the js*/
+	outline: 0;
+	color: #8C8B8B;
+}
+
+.dk_toggle {
+	display: -moz-inline-stack;
+	display: inline-block;
+	*display: inline;
+	position: relative;
+	zoom: 1;
+}
+
+.dk_open {
+	position: relative;
+}
+
+.dk_open .dk_options {
+	display: block;
+}
+
+.dk_open .dk_label {
+	color: inherit;
+}
+
+.dk_options {
+	display: none;
+	margin-top:8px;			/*change to ems*/
+	position: absolute;
+	left: 0;
+	width: 289px;
+}
+
+.dk_options a,.dk_options a:link,.dk_options a:visited {
+	display: block;
+}
+
+.dk_options_inner {
+	overflow: auto;
+	position: relative;
+}
+
+.dk_touch .dk_options {
+	overflow: hidden;
+}
+
+.dk_touch .dk_options_inner {
+	max-height: none;
+	overflow: visible;
+}
+
+
+/***** End Critical to the continued enjoyment of working dropdowns ******/

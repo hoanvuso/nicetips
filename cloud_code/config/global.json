@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "_default": {
+            "link": "nicepower"
+        }, 
+        "nicepower": {
+            "applicationId": "rSC2OyZyOme5psQ6cpA5eVIh1x9JLhrToiPfMhEU", 
+            "masterKey": "6YnPY7t61N0yXGC4NR5ziNaEGsrfkLhU5IiuEnOq"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.10"
+    }
+}
