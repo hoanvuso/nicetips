@@ -1,9 +1,10 @@
-<form class="form-step">
-    <table cellpadding="0" cellspacing="0" class="table-tips">
-
-        <tr>
-            <td class="td-1"><img src="<?php echo FRONT_SITE_URL ?>www/images/logo4.jpg"/></td>
-            <td class="td-2" colspan="2">
+<form class="form-step  box-tips">
+	<div class="row-fluid">
+        <div class="span12">
+            <div class="span3">
+    			<img src="<?php echo FRONT_SITE_URL ?>www/images/logo4.jpg" class="imgtips imgtips-temz"/>
+            </div>
+    		<div class="span9">
                 <div class="box-pro">
                     <table cellpadding="0" cellspacing="0" class="table-pro" id="view1">
                         <tr>
@@ -18,99 +19,91 @@
 
                     </table>
                 </div>
-            </td>
-        </tr>
-        <tr>
+            </div>
+       </div>
+    </div>
 
-            <table cellpadding="0" cellspacing="0" class="table-tips" id="view2">
-                <tr>
-                    <td colspan="3">
-                        <div class="line-tip"><img src="<?php echo FRONT_SITE_URL ?>www/images/cong.jpg" style="top:-39"
-                                                   id="save-people"/></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="td-1"><img src="<?php echo FRONT_SITE_URL ?>www/images/icon6.jpg"/>
-                    </td>
-                    <td class="td-2" style="padding-left: 15px; padding-right: 85px;">
-                        <input type="text" placeholder="People name" id="lastname"/>
-                        <img
-                            src="<?php echo FRONT_SITE_URL ?>www/images/star.jpg"/>
+     <div class="line-tip"><img src="<?php echo FRONT_SITE_URL ?>www/images/cong.jpg" style="top:-39px" /></div>
+     <div class="row-fluid">
+        <div class="span12">
+            <div class="span3">
+
+            </div>
+            <div class="span9" id="edit-team">
+            	<div class="pull-left ">
+                		<div class="row">
+                        <img src="<?php echo FRONT_SITE_URL ?>www/images/icon6.jpg"/> <input type="text" placeholder="People name" id="lastname"/>
+                        <img src="<?php echo FRONT_SITE_URL ?>www/images/star.jpg"/>
                         <span id="lastname-error"><p></p></span>
-                    </td>
+                        </div>
 
-
-                    <td class="td-3">
-                        <input type="text" placeholder="<?php echo t('Email') ?>" id="email"/>
-                        <span id="email-error"><p></p></span>
-                    </td>
-
-                </tr>
-
-                <tr>
-                    <td colspan="3">
-                        <table>
-                            <tr>
-                                <td class="sp1">
-                                    <?php echo t('<p>Upload files <br/>.jpeg, .tif, .bmp, .eps <br/> (max 400x400 - 150 dpi)</p>') ?>
-                                </td>
-                                <td class="sp2" style="overflow: hidden;width: 250px" >
-                                    <img src="<?php echo FRONT_SITE_URL ?>www/images/iamges.jpg" id="people-thumb" style="max-width: 250px;max-height: 250px"/>
-                                    <img src="" style="display: none;width: auto;height: auto" id="picture_real"/>
-                                    <input type="hidden" id="people-thumb-base64" value="">
-
-                                </td>
-                                <td class="sp3">
-
-                                </td>
-                                <td class="sp4" style="padding-right: 60px">
-                                    <img id="avatar-thumb"
+                        <div class="row" style="margin-left:0px;">
+                        	 <div class="row-team">
+                              <img src="<?php echo FRONT_SITE_URL ?>www/images/iamges.jpg" id="people-thumb" style=" width: 75px;height: 67px; "/>
+                             </div>
+                             <div class="row-team">
+                              <span class="text-row" style="margin-left:25px;"><?php echo t('The picture is important and can be added later.') ?></span>
+                              </div>
+                             <div class="row-team">
+                              <img src="" style="display: none;width: auto;height: auto" id="picture_real"/>
+                              <input type="hidden" id="people-thumb-base64" value="">
+                              <img id="avatar-thumb"
                                          src="<?php echo FRONT_SITE_URL ?>www/images/avatar/ava_01@2x.png"
-                                         style="width: 80px"/>
+                                         style="width: 80px; position:relative; margin-top:-17px;"/>
                                     <input type="hidden" value="01" id="avatar-thumb-val">
-                                </td>
-                                <td class="sp5">
+                              </div>
+                       </div><!--row-->
+                        <div class="row" style="margin-left:0px;">
+                             <div class="row-team">
+                                   <div class="upload_avatar" style="width:100px">
+                                            <button class="button" type="button">
+                                                <?php echo t('Upload') ?> </span>
+                                            </button>
+                                            <input type="file" class="no-uniform" name="file" id="people-picture">
+                                            <span id="image-error"><p></p></span>
+                                        </div>
+                             </div>
+                             <div class="row-team">
+                                     <?php echo t('<span class="text-row">Upload files <br/>.jpeg, .tif, .bmp, .eps <br/> (max 400x400 - 150 dpi)</span>') ?></p>
+                              </div>
+                             <div class="row-team">
+                                   <div class="upload_avatar"style="width:100px">
+                                            <button class="button" type="button" id="my-ava">
+                                                <?php echo t('MyAvatar') ?> </span>
+                                            </button>
 
-                                    <ul id="department-ui"></ul>
-                                    <input type="hidden" placeholder="<?php echo t('Department') ?>" id="department"/>
+                                   </div>
+                             </div>
+                        </div><!--row-->
+
+                 </div>
+
+				<div class="pull-right">
+                		<div class="row">
+                        <img src="<?php echo FRONT_SITE_URL ?>www/images/icon-email.png"/>  <input type="text" placeholder="<?php echo t('Email') ?>" id="email"/>
+                        <span id="email-error"><p></p></span>
+                        </div>
+                        <div class="row">
+                        <img src="<?php echo FRONT_SITE_URL ?>www/images/icon-department.png" style="float:left; margin-top:5px;"/>
+                        <ul id="department-ui"></ul>
+                        <img src="<?php echo FRONT_SITE_URL ?>www/images/icon10.jpg" style="float:left;  margin-top:10px;"/>
+                        <input type="hidden" placeholder="<?php echo t('Department') ?>" id="department"/>
                                     <span id="department-error"><p></p></span>
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="sp1"><?php echo t('The picture is important and can be added later.') ?></td>
-                                <td class="sp2">
-                                    <div class="upload_avatar">
-                                        <button class="button" type="button">
-                                            <?php echo t('Upload') ?> </span>
-                                        </button>
-                                        <input type="file" class="no-uniform" name="file" id="people-picture">
-                                        <span id="image-error"><p></p></span>
-                                    </div>
-                                </td>
-                                <td class="sp3"></td>
-                                <td class="sp4" style="padding-right: 60px">
-                                    <div class="upload_avatar">
-                                        <button class="button" type="button" id="my-ava">
-                                            <?php echo t('MyAvatar') ?> </span>
-                                        </button>
-
-                                    </div>
-                                </td>
-                                <td class="sp5">
-                                    <button class="button" type="button" id="print-badge" style="width: 290px">
+						</div>
+                        <div class="row but-tame">
+                        <button class="button" type="button" id="print-badge">
                                         <?php echo t('Print badge') ?> </span>
-                                    </button>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
+                        </button>
+                        <button class="button" type="button" style="float:right;" id="save-people">
+                                        <?php echo t('Save New') ?> </span>
+                        </button>
+                        </div>
+                </div>
+          </div>
+      </div>
+      </div>
 
-            </table>
 
-        </tr>
-    </table>
 </form>
 <style>
     .ui-dialog .ui-dialog-content {

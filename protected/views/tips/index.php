@@ -1,29 +1,21 @@
-<div id="divVote">
-    <table cellpadding="0" cellspacing="0" class="table-tips">
-        <tr>
-            <td></td>
-            <td>
-                <ul class="config-tips table-pro">
-                <li><input type="checkbox" id="active-tips" <?php echo  ($activateTips)?'checked':'' ?>> <?php echo t('Active tips'); ?></li>
-                <li>
-                    <input type="checkbox" <?php echo ($showTips)?'checked':'' ?> id="show-tips"> <?php echo t('Show the tip amount to everyone'); ?>
-                    <img id="save-tip-config"
-                        src="<?php echo FRONT_SITE_URL ?>www/images/star.jpg"/>
-
-                </li>
-
-                </ul>
-            </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td class="td-1"><?php echo t('Use this PayPal <br/>account if not differently set.')?></td>
-            <td>
-                <div class="table-pro">
-
-                    <input type="text" placeholder="<?php echo t('PayPal Account') ?>"
+<div id="divVote" class="form-step  box-tips">
+	<img src="<?php echo WWW_URL ?>images/paypal.jpg" class="img-paypal"/>
+	<div class="row-fluid">
+        <div class="span12">
+            <div class="span3">
+            	<div class="hint-text">
+            	<?php echo t('Use this PayPal <br/>account if not differently set.')?>
+                </div>
+                <div>
+                	<img src="<?php echo WWW_URL ?>images/logo4.jpg" class="imgtips imgtips-tip" style="left:130px; top:67px"/>
+                </div>
+            </div>
+            <div class="span9">
+            	<div class="pull-left">
+                	<div class="table-pro row">
+                      <img src="<?php echo WWW_URL ?>images/icon2.jpg" class="iconpaypal" /><input type="text" placeholder="<?php echo t('PayPal Account') ?>"
                            value="<?php echo !empty($placePayment) ? $placePayment->accountName : '' ?>" style="float:left;"
-                           id="paypal-place-account"/>
+                           id="paypal-place-account" />
 
                     <div class="box-etip">
                         <a href="#" id="save-btn"><img src="<?php echo FRONT_SITE_URL?>www/images/plus.png"></a>
@@ -31,78 +23,61 @@
                         <a href="#" id="delete-btn"><i class="action delete"></i></a>
                     </div>
                    </div>
-            </td>
-            <td class="td-3" align="right">
-                <img src="<?php echo WWW_URL ?>images/paypal.jpg"/>
-            </td>
-        </tr>
 
-        <tr>
-            <td class="td-1"><img src="<?php echo WWW_URL ?>images/logo4.jpg"/></td>
-            <td class="td-2" colspan="2">
-
-                <div class="row-fluid">
-                    <div class="span12">
-                        <div class="span8">
-                            <div class="box-pro" style="overflow: hidden">
-                                <table cellpadding="0" cellspacing="0" id='view1' class="table-pro">
+                   <div class="row">
+                   		<div class="box-pro" style="overflow: hidden">
+                                <table cellpadding="0" cellspacing="0" id='view1' class="table-pro tbale-tips">
                                     <tr>
                                         <th><?php echo t('Name');?></th>
-                                        <th><?php echo t('PayPal Account')?></th>
+                                        <th ><?php echo t('PayPal Account')?></th>
                                         <th class="action-color"><?php echo t('Account')?></th>
                                         <th class="action-color"><?php echo t('Edit')?></th>
                                         <th class="action-color"><?php echo t('Delete')?></th>
                                     </tr>
                                 </table>
-                                <input id="add-people" value="Add people" class="btn" style="float: right;margin-right: -7px; width: 70px;font-size: 1.2em; line-height: 12px !important; margin-top: 15px;">
                             </div>
-                        </div>
-                        <div class="span4">
-                            <table cellpadding="0" cellspacing="0" id='view12' class="table-pro">
-                                <tr>
-                                    <td>
-                                        <select id="value-cash">
+                   </div>
+
+                </div>
+                <div class="pull-right">
+                	<ul class="config-tips table-pro">
+                        <li><input type="checkbox" id="active-tips" <?php echo  ($activateTips)?'checked':'' ?> class="save-tip-config" /> <?php echo t('Active tips'); ?></li>
+                        <li>
+                            <input type="checkbox" <?php echo ($showTips)?'checked':'' ?> id="show-tips" style="width:auto;" class="save-tip-config" /> <?php echo t('Show the tip amount to everyone'); ?>
+                            <img id="save-tip-config"
+                                src="<?php echo FRONT_SITE_URL ?>www/images/icon10.jpg"/>
+
+                        </li>
+
+                    </ul>
+
+                    <select id="value-cash">
                                             <option value=""><?php echo t('Select value cash')?></option>
                                             <option value="USD">USD</option>
                                             <option value="EUR">Euro</option>
                                             <option value="GBP">GBP</option>
                                         </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <!--<select id="tip-value">
-                                            <option value="" selected><?php /*echo t('Select tip value')*/?></option>
-                                            <?php /*for($i=1;$i<=0;$i++) :*/?>
-                                                <option value="<?php /*$i */?>">$i</option>
-                                            <?php /*endfor;*/?>
-                                        </select>-->
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
+                    <br />
+                      <input id="add-people" type="button" value="Add people" class="button" style="float: left; width: 106px; margin-top: 40px;">
+
                 </div>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3">
-                <div class="line-tip"><img src="<?php echo WWW_URL ?>images/tip.jpg" style="top:-39" id="print-infographic-btn"/></div>
-            </td>
-        </tr>
-        <tr>
-            <td class="td-1" style="padding-bottom:10px;">&nbsp;</td>
-            <td colspan="2" style="padding-bottom:10px;">
-                <?php echo t('LIST OF RECEIVED TIPS')?>
-            </td>
-        </tr>
-        <tr>
-            <td class="td-1"><img src="<?php echo WWW_URL ?>images/logo2.jpg"/></td>
-            <td class="td-2" colspan="2">
+            </div>
+        </div>
+    </div>
 
-                <div class="box-pro">
+     <div class="line-tip"><img src="<?php echo WWW_URL ?>images/tip.jpg" style="top:-39" id="print-infographic-btn"/></div>
 
-                    <table cellpadding="0" cellspacing="0" class="table-pro" id="tbl-vote">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="span3">
+            	<img src="<?php echo WWW_URL ?>images/logo2.jpg" class="imgtips imgtips-tip"/>
+            </div>
+            <div class="span9" style="margin-left:0px;">
+            	<?php echo t('LIST OF RECEIVED TIPS')?>
+
+                <div class="box-pro" style="margin-bottom:20px;">
+
+                    <table cellpadding="0" cellspacing="0" class="table-pro" id="tbl-vote" >
 
                         <tr>
                             <th><?php echo t('Date')?></th>
@@ -113,13 +88,13 @@
                         </tr>
 
                     </table>
-                    <div class="pagination"></div>
+                    <!--<div class="pagination"></div>-->
                 </div>
-            </td>
-        </tr>
-    </table>
+            </div>
+        </div>
+    </div>
 
-    </table>
+
 </div>
 
 <?php

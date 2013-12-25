@@ -212,6 +212,7 @@ img {
 
 .top-bar {
     position: relative;
+	height:230px;
 }
 
 .step {
@@ -291,6 +292,7 @@ img {
     overflow: hidden;
     font-family: "Helvetica Neue light";
     margin-top: 20px;
+	margin-bottom:40px;
 }
 
 .title h2 {
@@ -314,9 +316,11 @@ img {
     height: 30px;
     font-size: 15px;
 }
-
+.tbale-tips input[type="text"] {
+	width:215px;
+}
 .table-tips {
-    width: 92%;
+    width: 100%;
     margin-left: 78px;
     margin-top: 30px;
 }
@@ -333,8 +337,7 @@ img {
 }
 
 .table-tips .td-2 {
-    padding-right: 43px;
-    width: 320px;
+    padding: 0 43px 0 120px;
 }
 
 .table-tips .td-1 img {
@@ -351,7 +354,6 @@ img {
 
 .line-tip img {
     position: absolute;
-    left: -60px;
     top: -50px;
     background: #fff;
     padding-right: 30px;
@@ -368,14 +370,22 @@ img {
     padding: 0;
     position: absolute;
     top: 0;
-    width: 36%;
+    width: 100px !important;
 }
 
 .upload_avatar {
     overflow: hidden;
     position: relative;
+	width:370px;
 }
-
+.upload_avatar .button {
+	float:left;
+}
+.upload_avatar  p{
+	float:left;
+	width:250px;
+	margin-left:10px;
+}
 .upload {
     line-height: 15px;
 }
@@ -475,7 +485,7 @@ img {
 
 .table-pro {
     width: 100%;
-
+    position:relative;
 }
 
 .table-pro th {
@@ -643,3 +653,73 @@ img {
     right: 0;
 }
 .load{position:absolute;top:0;right:0;left:0;bottom:0;z-index: 999999;display:none}
+.form-step {
+    position: relative;
+}
+.imgtips {
+    position: absolute;
+    top:87px;
+    left: 101px;
+}
+[class^="icon-"], [class*=" icon-"] {
+    width:25px; height: 25px; background-position:0 0
+}
+.icon-address{background-image: url(../images/icon-address.png);}
+.icon-country{background-image: url(../images/icon-country.png);}
+.icon-place{background-image: url(../images/icon8.jpg);}
+.icon-star{background-image: url(../images/star.jpg);}
+.icon-city{background-image: url(../images/icon-city.png);}
+.icon-zipcode{background-image: url(../images/icon-zipcode.png);}
+.icon-clock{background-image: url(../images/icon11.jpg);}
+.iconpaypal{position:absolute;left:-42px}
+.box-tips .row {
+	margin-bottom:10px;
+}
+.left-tip {
+	text-align:right;
+}
+.no-cion .row {
+	margin-left:0px;
+}
+.text-row {
+	width:150px;
+	display:inline-block;
+}
+.row-team {
+	float:left;
+}
+.but-tame {
+	overflow:hidden;
+	margin-left:3px;
+	margin-right:28px;
+	margin-top:30px;
+}
+.but-tame button {
+	float:left;
+}
+.imgtips-temz {
+	top:51px;
+	left:151px;
+}
+.span3 {
+	position:relative;
+}
+.imgtips-tip {
+	top:51px;
+	left:133px;
+}
+.img-paypal {
+	position:absolute;
+	top:-95px;
+	right:10px;
+}
+#divVote {
+	position:relative;
+}
+.config-tips {
+	margin-bottom:10px;
+}
+.config-tips  input {
+	margin-top:0px;
+}
+.hint-text{font-size:85%}

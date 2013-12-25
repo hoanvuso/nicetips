@@ -3,7 +3,7 @@
  */
 var CurrentEmployeeView = Parse.View.extend({
 
-        el: '#view2',
+        el: '#edit-team',
 
         events: {
             'click #save-people': 'savePeople',

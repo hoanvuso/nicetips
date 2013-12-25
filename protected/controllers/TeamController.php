@@ -21,8 +21,6 @@ class TeamController extends Controller
     public function accessRules()
     {
         return array(
-            array('allow',
-                'users' => array('*')),
             array('allow', // allow authenticated users to access all actions
                 'actions' => array('index', 'save', 'getpeople', 'getpeopleinfo', 'delete', 'edit', 'downloadpdf'),
                 'users' => array('@'),

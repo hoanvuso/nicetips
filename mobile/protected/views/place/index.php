@@ -7,7 +7,11 @@
 <ul class="listindex place-nea" id="listPlace"></ul>
 
 <script>
-    function searchPlaces(position){
+    function searchPlaces(position, distance){
+        if(distance == null){
+            distance = 10;
+        }
+
         $('.loading').show();
         var userLocation;
         var coords = {latitude:1,longitude:-1};
@@ -23,7 +27,7 @@
             query.startsWith("name", $('#keywords').val());
         }
         query.descending("name");
-        query.withinKilometers('location', userLocation, 10);
+        query.withinKilometers('location', userLocation, distance);
 
         query.limit(100);
         query.find({
@@ -54,9 +58,7 @@
             if (navigator.geolocation){
                 navigator.geolocation.getCurrentPosition(searchPlaces);
             } else {
-                searchPlaces({
-                    coords : {latitude: 1, longitude : -1}
-                });
+                searchPlaces({coords : {latitude: 1, longitude : -1}}, 99999);
             }
         });
         $('#search').trigger('click');

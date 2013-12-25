@@ -1,7 +1,7 @@
 var PlaceView = Parse.View.extend({
 
     el: '#place-form',
-    tagName: 'table',
+    //tagName: 'table',
 
     _errors: {},
 

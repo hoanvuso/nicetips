@@ -1,7 +1,7 @@
 <?php
 // remove the following line when in production mode
-//defined('YII_DEBUG') or define('YII_DEBUG', true);
-//defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL', 3);
+/*defined('YII_DEBUG') or define('YII_DEBUG', true);
+defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL', 3);*/
 date_default_timezone_set('UTC');
 error_reporting(0);
 

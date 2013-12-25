@@ -246,143 +246,126 @@ $countries = array(
 
 <div id="place-form">
 
-<form class="form-step">
-<table cellpadding="0" cellspacing="0" class="table-tips">
-<tr>
-    <td class="td-1"><img src="<?php echo FRONT_SITE_URL ?>www/images/icon8.jpg"/></td>
-    <td class="td-2">
-        <input type="text" placeholder="<?php echo t('Type your business name') ?>" id="business-search"
+<form class="form-step  box-tips">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="span3">
+                <img src="<?php echo FRONT_SITE_URL ?>www/images/img.jpg" class="imgtips"/>
+            </div>
+            <div class="span9">
+                <div class="pull-left">
+                    <div class="row">
+                        <icon class="icon-place"></icon>
+                        <input type="text" placeholder="<?php echo t('Type your business name') ?>" id="business-search"
                value="<?php echo !empty($placeInfo) ? $placeInfo->name : ''; ?>"/>
-        <img src="<?php echo FRONT_SITE_URL ?>www/images/star.jpg" align="absmiddle"/>
-        <span id="business-search-error"><p></p></span>
-    </td>
-    <td class="td-3"><img src="<?php echo FRONT_SITE_URL ?>www/images/save-new-place.png" id="btn-submit"></td>
-</tr>
-<tr>
-    <td class="td-1" rowspan="2"><img src="<?php echo FRONT_SITE_URL ?>www/images/img.jpg"/></td>
-    <td class="td-2">
-        <input type="text" placeholder="<?php echo t('Address') ?>" id="address"
+                        <icon class="icon-star"></icon>
+
+                        <span id="business-search-error"><p></p></span>
+                    </div>
+
+                    <div class="row">
+                        <icon class="icon-address"></icon>
+                        <input type="text" placeholder="<?php echo t('Address') ?>" id="address"
                value="<?php echo !empty($placeInfo) ? $placeInfo->formattedAddress : ''; ?>"/>
-        <span id="address-error"><p></p></span>
-    </td>
-    <td class="td-3">
-        <input type="text" placeholder="<?php echo t('City') ?>" id="city"
-               value="<?php echo !empty($placeInfo) ? $placeInfo->city : ''; ?>"/>
-        <span id="city-error"><p></p></span>
-    </td>
-</tr>
-<tr>
+
+                        <span id="address-error"><p></p></span>
+                    </div>
+
+                    <div class="row">
+                        <icon class="icon-country"></icon>
+                        <select name="baby_bear" class="baby_bear dd" id="country">
+                            <?php foreach($countries as $country) : ?>
+                                    <option value="<?php echo $country ?>"<?php if($country == $placeInfo->country) echo 'selected' ?>><?php echo $country ?></option>
+                            <?php endforeach; ?>
+                        </select>
+
+                        <input type="hidden" value="<?php echo $placeInfo->googleReference ?>" id="googleReference" />
+                        <input type="hidden" value="<?php echo $placeInfo->placeId ?>" id="placeId" />
+                        <input type="hidden" value="<?php echo $placeInfo->placeType ?>" id="placeType" />
+                    </div>
+                </div>
+                <div class="pull-right">
+                    <div class="row">
+                        <icon class="icon-blank"></icon>
+                        <img src="<?php echo FRONT_SITE_URL ?>www/images/save-new-place.png" id="btn-submit">
+                    </div>
+
+                    <div class="row">
+                        <icon class="icon-city"></icon>
+                        <input type="text" placeholder="<?php echo t('City') ?>" id="city"
+                            value="<?php echo !empty($placeInfo) ? $placeInfo->city : ''; ?>"/>
+                        <span id="city-error"><p></p></span>
+                    </div>
+
+                    <div class="row">
+                        <icon class="icon-zipcode"></icon>
+                        <input type="text" placeholder="<?php echo t('Zip') ?>" id="zip"
+                                value="<?php echo !empty($placeInfo) ? $placeInfo->zip : ''; ?>"/>
+                         <span id="zip-error"><p></p></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-<td class="td-2">
-
-	<select name="baby_bear" class="baby_bear dd" id="country">
-		<?php foreach($countries as $country) : ?>
-			<option value="<?php echo $country ?>"<?php if($country == $placeInfo->country) echo 'selected' ?>><?php echo $country ?></option>
-		<?php endforeach; ?>
-	</select>
-
-    <input type="hidden" value="<?php echo $placeInfo->googleReference ?>" id="googleReference" />
-    <input type="hidden" value="<?php echo $placeInfo->placeId ?>" id="placeId" />
-    <input type="hidden" value="<?php echo $placeInfo->placeType ?>" id="placeType" />
-</td>
-
-
-<td class="td-3">
-    <input type="text" placeholder="<?php echo t('Zip') ?>" id="zip"
-           value="<?php echo !empty($placeInfo) ? $placeInfo->zip : ''; ?>"/>
-    <span id="zip-error"><p></p></span>
-</td>
-
-</tr>
-<tr>
-    <td colspan="3">
+    <div>
         <div class="line-tip" id="print-leaflet">
             <?php if (!isset($this->placeId)) : ?>
-            <img src="<?php echo FRONT_SITE_URL ?>www/images/print.jpg"/></div>
+                <img src="<?php echo FRONT_SITE_URL ?>www/images/print.jpg"/>
+        </div>
         <?php else : ?>
             <img
                 src="<?php echo CommonHelper::generateQRCode(app()->createAbsoluteUrl('/place/index', array('id' => $this->placeId)), 100, 100) ?>"/>
         <?php
         endif;
         ?>
-</div>
+    </div>
 
-</td>
-</tr>
-
-<tr>
-    <td class="td-1" rowspan="2" valign="bottom"
-        style="padding-right:0"><?php echo t('Upload your company image, ogotype or trademark.') ?></td>
-    <td class="td-2" rowspan="2">
-
-        <div class="upload">
-            <table>
-                <tr>
-                    <td>
-                        <p style="width: 90px"><?php echo t('Upload files <br/>.jpeg, .tif, .bmp, .eps <br/> (max 400x400 - 150 dpi)'); ?></p>
-                    </td>
-                    <td style="overflow: hidden;width: 250px;">
-                        <img style=" max-width: 250px;max-height: 250px"
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="span3 left-tip">
+            	<?php /*<div class="row">
+            	 <img src="<?php echo FRONT_SITE_URL ?>www/images/my-place.png"/>
+                 </div> */ ?>
+                 <div class="row">
+                <img style=" width: 75px;height: 67px; "
                              src="<?php echo isset($placeInfo->logo) ? $placeInfo->logo : FRONT_SITE_URL . 'www/images/iamges.jpg' ?>"
                              id="logo-thumb"/>
-                        <img src="" style="display: none" id="logo-thumb-real">
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                        <img
-                            src="<?php echo FRONT_SITE_URL ?>www/images/my-place.png"
-                            id="logo-thumb" style="width: 93px;height: 93px"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-
-                    </td>
-                    <td>
+                <img src="" style="display: none" id="logo-thumb-real">
+                </div>
+            </div>
+            <div class="span9">
+                <div class="pull-left no-cion">
+                    <?php /*<div class="row" style="margin-top:15px;">
+                    	<?php echo CHtml::dropDownList('cat', '', $category, array('options' => array($placeInfo->category => array('selected' => true)), 'placeholder' => t('Category'), 'style' => 'width:269px;height:40px;')) ?>
+                        <img src="<?php echo FRONT_SITE_URL ?>www/images/icon10.jpg" />
+                    </div>*/ ?>
+                    <div class="row" style="margin-top:17px;">
+                        <p><?php echo t('Upload your company image, ogotype or trademark.') ?></p>
                         <div class="upload_avatar">
                             <button class="button" type="button">
                                 <?php echo t('Upload') ?> </span>
                             </button>
                             <input type="file" class="no-uniform" name="file-logo" id="logo">
+                            <p><?php echo t('Upload files .jpeg, .tif, <br>.bmp, .eps (max 400x400 - 150 dpi)'); ?></p>
                             <span id="logo-error"><p></p></span>
                         </div>
-                    </td>
-                    <td></td>
-                    <td>
+                    </div>
+                </div>
+                <div class="pull-right">
+                    <div class="row">
+                        <icon class="icon-clock"></icon>
+                        <input style="width: 250px" type="text" placeholder="<?php echo t('Coordinate') ?>" id="place-search" readonly="true"
+                               value="<?php echo !empty($placeInfo) ? $placeInfo->location->latitude . ',' . $placeInfo->location->longitude : '' ?>"/>
 
-                    </td>
-                </tr>
-            </table>
-
-
+                        <img src="<?php echo FRONT_SITE_URL ?>www/images/icon9.jpg" id="google-map-btn"/>
+                        <span id="place-search-error"><p></p></span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="upload_avatar">
-
-        </div>
-        </div>
-
-    </td>
-    <td class="td-3">
-        <?php echo CHtml::dropDownList('cat', '', $category, array('options' => array($placeInfo->category => array('selected' => true)), 'placeholder' => t('Category'), 'style' => 'width:269px;height:40px;')) ?>
-
-        <img
-            src="<?php echo FRONT_SITE_URL ?>www/images/icon10.jpg"/></td>
-</tr>
-<tr>
-    <td class="td-3"><img src="<?php echo FRONT_SITE_URL ?>www/images/icon11.jpg" class="dongho"/>
-
-        <input style="width: 250px" type="text" placeholder="<?php echo t('Coordinate') ?>" id="place-search" readonly="true"
-               value="<?php echo !empty($placeInfo) ? $placeInfo->location->latitude . ',' . $placeInfo->location->longitude : '' ?>"/>
-
-        <img src="<?php echo FRONT_SITE_URL ?>www/images/icon9.jpg" id="google-map-btn"/>
-        <span id="place-search-error"><p></p></span>
-    </td>
-
-</tr>
-
-</table>
+    </div>
 </form>
 
 <?php

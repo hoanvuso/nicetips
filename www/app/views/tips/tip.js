@@ -4,7 +4,7 @@
 var TipsView = Parse.View.extend({
 
 
-    el: '.table-pro',
+    el: '#divVote',
     peopleList : '',
 
 
@@ -87,7 +87,7 @@ var TipsView = Parse.View.extend({
         },
 
         // event save tip config
-        'click #save-tip-config': function (e) {
+        'change .save-tip-config': function (e) {
             // get the value from UX
             e.preventDefault();
             var activeStatus = '';

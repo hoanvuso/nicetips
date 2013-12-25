@@ -141,6 +141,7 @@ class PlaceController extends Controller
                 $parseCloud->lon = $_POST['lon'];
                 $parseCloud->placeId = $place->objectId;
                 $parseCloud->user = $_POST['user'];
+                $parseCloud->roleId = $peopleRoleId;
 
                 try {
                     $parseCloud->run();
@@ -151,9 +152,6 @@ class PlaceController extends Controller
 
                     app()->end();
                 } catch (Exception $e) {
-					dump($e);
-					
-                    app()->end();
                 }
             }
         }
@@ -202,6 +200,7 @@ class PlaceController extends Controller
                 $parseCloud->lon = $_POST['lon'];
                 $parseCloud->placeId = $place->objectId;
                 $parseCloud->currency = $place->defaultCurrency;
+				$parseCloud->roleId = $peopleRoleId;
 
                 try {
                     $parseCloud->run();

@@ -4,7 +4,7 @@ $root = dirname(__FILE__) . DIRECTORY_SEPARATOR . '..';
 define('ROOT', $root);
 
 
-define('APP_TIMEZONE','Asia/Ho_Chi_Minh');
+/*define('APP_TIMEZONE','Asia/Ho_Chi_Minh');
 define('RESOURCE_URL','http://shrouded-bastion-6698.herokuapp.com/www/resources/');
 define('AVATAR_URL','http://shrouded-bastion-6698.herokuapp.com/www/uploads/avatar/');
 define('PRODUCT_URL','http://shrouded-bastion-6698.herokuapp.com/www/uploads/products/');
@@ -15,8 +15,8 @@ define('SUPPORT_EMAIL','info@myproject.com');
 define('FRONT_SITE_URL','http://shrouded-bastion-6698.herokuapp.com/');
 define('BACKEND_SITE_URL','http://shrouded-bastion-6698.herokuapp.com/backend/');
 define('WWW_URL', 'http://shrouded-bastion-6698.herokuapp.com/www/');
-define('WWW_MOBILE_URL', 'http://shrouded-bastion-6698.herokuapp.com/mobile/www/');
-/*
+define('WWW_MOBILE_URL', 'http://shrouded-bastion-6698.herokuapp.com/mobile/www/');*/
+
 define('APP_TIMEZONE','Asia/Ho_Chi_Minh');
 define('RESOURCE_URL','http://localhost/happytips/www/resources/');
 define('AVATAR_URL','http://localhost/happytips/www/uploads/avatar/');
@@ -29,7 +29,7 @@ define('FRONT_SITE_URL','http://localhost/happytips/');
 define('BACKEND_SITE_URL','http://localhost/happytips/backend/');
 define('WWW_URL', 'http://localhost/happytips/www/');
 define('WWW_MOBILE_URL', 'http://localhost/happytips/mobile/www/');
-*/
+
 /******file*******/
 $wwwPath = ROOT . DIRECTORY_SEPARATOR . 'www' . DIRECTORY_SEPARATOR ;
 define('UPLOAD_PATH', $wwwPath . 'uploads' . DIRECTORY_SEPARATOR);

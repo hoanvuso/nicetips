@@ -10,13 +10,6 @@ $(document).ready(function() {
         }
     });
 
-
-    var top = $(document).height() / 2;
-    var left = $(document).width() / 2;
-    $('.load').css('top', top);
-    $('.load').css('left', left);
-
-
     for (var i = 0; i < $('.breadcummb-items').length; i++) {
         $('.breadcummb-items').eq(i).addClass('inactive');
         $('.breadcummb-bullet-items').eq(i).addClass('inactive');

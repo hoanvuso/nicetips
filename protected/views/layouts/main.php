@@ -97,14 +97,12 @@
 
             <div class="title">
                 <h2>NiceTips</h2>
-
                 <?php
-                $controllerName = app()->controller->id;
+                $controllerName = app()->controller->id . '';
+	
                 switch ($controllerName) {
                     case 'place' : {
-                            if ($this->placeId == '') {
                                 echo t('<p>Welcome to NiceTips at a moment <br/> are no place that you manage, add new place!</p>');
-                            }
                             break;
                         }
                     case 'team': {
@@ -120,6 +118,10 @@
                             echo t('<p>Welcome <br/> lorem ..... !</p>');
                             break;
                         }
+					default :
+						echo t('<p>Welcome <br/> lorem ..... !</p>');
+                            break;
+ 
                 }
                 ?>
 
@@ -323,6 +325,6 @@ $this->beginWidget('zii.widgets.jui.CJuiDialog', array(
             deletePlaceUrl = '<?php echo app()->createUrl('/place/delete') ?>';   // URL FOR delete place
             indexPlaceUrl = '<?php echo app()->createUrl('/place/index') ?>';
         </script>
-        <script src="<?php echo bu() ?>/www/js/app.js"></script>
+        <script src="<?php echo bu() ?>www/js/app.js"></script>
     </body>
 </html>
